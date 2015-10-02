@@ -4,7 +4,7 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://yusizhang.github.io/atom.xml" rel="self"/>
   <link href="http://yusizhang.github.io/"/>
-  <updated>2015-10-02T12:44:28-07:00</updated>
+  <updated>2015-10-02T16:06:08-07:00</updated>
   <id>http://yusizhang.github.io/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -12,5 +12,71 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Mark Down Cheatsheet]]></title>
+    <link href="http://yusizhang.github.io/blog/2015/10/02/hello-world/"/>
+    <updated>2015-10-02T14:45:20-07:00</updated>
+    <id>http://yusizhang.github.io/blog/2015/10/02/hello-world</id>
+    <content type="html"><![CDATA[<h2>Headings</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># The largest heading (an &lt;h1&gt; tag)
+</span><span class='line'>## The second largest heading (an &lt;h2&gt; tag)
+</span><span class='line'>###### The 6th largest heading (an &lt;h6&gt; tag)</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Blockquotes</h2>
+
+<p>In the words of Abraham Lincoln:</p>
+
+<blockquote><p>Pardon my french</p></blockquote>
+
+<h2>Styling text</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>*This text will be italic*
+</span><span class='line'>**This text will be bold**
+</span><span class='line'>**Everyone _must_ attend the meeting at 5 o'clock today.**</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Lists</h2>
+
+<h3>Unordered lists</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>* Item1
+</span><span class='line'>* Item2</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Links</h2>
+
+<p><a href="http://yusizhang.github.io/">Visit GitHub!</a></p>
+
+<h2>Code Snippets</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ git clone git@github.com:yusizhang/yusizhang.github.io.git # fork yusizhang.github.io</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Awesome code snippet</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<!-- more -->
+
+
+
+]]></content>
+  </entry>
   
 </feed>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Test | My Octopress Blog]]></title>
+  <link href="http://yusizhang.github.io/blog/categories/test/atom.xml" rel="self"/>
+  <link href="http://yusizhang.github.io/"/>
+  <updated>2015-10-02T16:06:08-07:00</updated>
+  <id>http://yusizhang.github.io/</id>
+  <author>
+    <name><![CDATA[Your Name]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Mark Down Cheatsheet]]></title>
+    <link href="http://yusizhang.github.io/blog/2015/10/02/hello-world/"/>
+    <updated>2015-10-02T14:45:20-07:00</updated>
+    <id>http://yusizhang.github.io/blog/2015/10/02/hello-world</id>
+    <content type="html"><![CDATA[<h2>Headings</h2>
+
+<pre><code># The largest heading (an &lt;h1&gt; tag)
+## The second largest heading (an &lt;h2&gt; tag)
+###### The 6th largest heading (an &lt;h6&gt; tag)
+</code></pre>
+
+<h2>Blockquotes</h2>
+
+<p>In the words of Abraham Lincoln:</p>
+
+<blockquote><p>Pardon my french</p></blockquote>
+
+<h2>Styling text</h2>
+
+<pre><code>*This text will be italic*
+**This text will be bold**
+**Everyone _must_ attend the meeting at 5 o'clock today.**
+</code></pre>
+
+<h2>Lists</h2>
+
+<h3>Unordered lists</h3>
+
+<pre><code>* Item1
+* Item2
+</code></pre>
+
+<h2>Links</h2>
+
+<p><a href="http://yusizhang.github.io/">Visit GitHub!</a></p>
+
+<h2>Code Snippets</h2>
+
+<pre><code class="">$ git clone git@github.com:yusizhang/yusizhang.github.io.git # fork yusizhang.github.io
+</code></pre>
+
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Awesome code snippet</span></code></pre></td></tr></table></div></figure></p>
+
+<!-- more -->
+
+
+
+]]></content>
+  </entry>
+  
+</feed>
