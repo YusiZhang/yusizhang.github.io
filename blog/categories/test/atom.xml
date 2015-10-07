@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Test | My Octopress Blog]]></title>
+  <title><![CDATA[Category: Test | Tech jibber-jabbers]]></title>
   <link href="http://yusizhang.github.io/blog/categories/test/atom.xml" rel="self"/>
   <link href="http://yusizhang.github.io/"/>
-  <updated>2015-10-02T16:06:08-07:00</updated>
+  <updated>2015-10-06T17:28:25-07:00</updated>
   <id>http://yusizhang.github.io/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
+    <name><![CDATA[Yusi Zhang]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
@@ -24,6 +24,9 @@
 ## The second largest heading (an &lt;h2&gt; tag)
 ###### The 6th largest heading (an &lt;h6&gt; tag)
 </code></pre>
+
+<!-- more -->
+
 
 <h2>Blockquotes</h2>
 
@@ -57,11 +60,6 @@
 
 <p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>Awesome code snippet</span></code></pre></td></tr></table></div></figure></p>
-
-<!-- more -->
-
-
-
 ]]></content>
   </entry>
   

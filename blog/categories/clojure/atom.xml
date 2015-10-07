@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Clojure | Tech jibber-jabbers]]></title>
+  <link href="http://yusizhang.github.io/blog/categories/clojure/atom.xml" rel="self"/>
+  <link href="http://yusizhang.github.io/"/>
+  <updated>2015-10-06T17:28:25-07:00</updated>
+  <id>http://yusizhang.github.io/</id>
+  <author>
+    <name><![CDATA[Yusi Zhang]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Clojure Cheatsheet]]></title>
+    <link href="http://yusizhang.github.io/blog/2015/10/06/clojure-cheatsheet/"/>
+    <updated>2015-10-06T13:23:46-07:00</updated>
+    <id>http://yusizhang.github.io/blog/2015/10/06/clojure-cheatsheet</id>
+    <content type="html"><![CDATA[<h2>Define Function</h2>
+
+<p>Write a function which returns a personalized greeting.
+(= (__ &ldquo;Dave&rdquo;) &ldquo;Hello, Dave!&rdquo;)</p>
+
+<p><a href="https://www.4clojure.com/problem/16">Hello World</a></p>
+
+<pre><code>(fn [name] (str "Hello, ", name, "!"))
+</code></pre>
+
+<p>or</p>
+
+<p>&ldquo;#(str "Hello, &rdquo; % &ldquo;!&rdquo;)"</p>
+
+<!-- more -->
+
+
+<h2>Filter</h2>
+
+<pre><code>(filter #(&gt; % 5) '(3 4 5 6 7))
+</code></pre>
+
+<p>returns &lsquo;(6 7)</p>
+
+<h2>Local Bindings</h2>
+
+<p>Clojure lets you give local names to values using the special <strong>let-form</strong>.</p>
+
+<p>Sample1
+<code>
+(let [x 5] (+ 2 x))
+</code>
+In Java something like:</p>
+
+<pre><code>int x = 5;
+x + 2;
+</code></pre>
+
+<p>Sample2
+<code>
+(let [x 3, y 10] (- y x))
+</code></p>
+
+<p>In Java something like:
+<code>
+int x = 3, y = 10;
+y - x;
+</code></p>
+
+<h2>Recursion</h2>
+
+<p>A recursive function is a function which calls itself. This is one of the fundamental techniques used in functional programming.</p>
+
+<pre><code>(defn recursionFn [x]
+  (when (&gt; x 0)
+    (conj (recursionFn (dec x)) x)))
+
+=&gt;(recursion 5)
+=&gt;[5 4 3 2 1]
+</code></pre>
+
+<h2>Rearranging Code &ldquo;->&rdquo; vs &ldquo;->>&rdquo;</h2>
+
+<p>These two lines are the same
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>(sort (rest (reverse [2 5 4 1 3 6])))&lt;/p&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;p&gt;(-&gt; [2 5 4 1 3 6] (reverse) (rest) (sort))</span></code></pre></td></tr></table></div></figure></p>
+
+<p>I like this explaination:</p>
+
+<p><blockquote><p>;; let&rsquo;s compare thread first (->) and thread last ( ->> )<br/>user=> (macroexpand &lsquo;(-> 0 (+ 1) (+ 2) (+ 3)))<br/>(+ (+ (+ 0 1) 2) 3)<br/>user=> (macroexpand &rsquo;(->> 0 (+ 1) (+ 2) (+ 3)))<br/>(+ 3 (+ 2 (+ 1 0)))</p><footer><strong>deddu <a href="https://clojuredocs.org/clojure.core/-%3E%3E#example-55416db5e4b01bb732af0a8c">https://clojuredocs.org/clojure.core/-%3E%3E#example-55416db5e4b01bb732af0a8c</a></strong></footer></blockquote></p>
+
+<h2>Loop and recur</h2>
+
+<p>(loop [bindings<em>] exprs</em>)</p>
+
+<pre><code>=&gt;(loop [x 10]
+    (when (&gt; x 0)
+        (if (&gt; x 5)
+            (print x)
+            (print (* -1 x)))
+        (recur (- x 1))))
+
+=&gt;-10-9-8-7-6-54321
+</code></pre>
+]]></content>
+  </entry>
+  
+</feed>
