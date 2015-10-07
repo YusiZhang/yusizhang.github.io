@@ -3,7 +3,6 @@ layout: post
 title: "Mark Down Cheatsheet"
 date: 2015-10-02 14:45:20 -0700
 comments: true
-categories: 
 author: UCZhang
 categories: TEST
 ---
@@ -14,7 +13,7 @@ categories: TEST
 ## The second largest heading (an <h2> tag)
 ###### The 6th largest heading (an <h6> tag)
 ```
-
+<!-- more -->
 ## Blockquotes
 In the words of Abraham Lincoln:
 
@@ -50,7 +49,6 @@ $ git clone git@github.com:yusizhang/yusizhang.github.io.git # fork yusizhang.gi
 Awesome code snippet
 {% endcodeblock %}
 
-<!-- more -->
 
 
 
