@@ -1,24 +1,97 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Tech jibber-jabbers]]></title>
-  <link href="http://yusizhang.github.io/atom.xml" rel="self"/>
-  <link href="http://yusizhang.github.io/"/>
-  <updated>2015-10-07T18:16:01-07:00</updated>
-  <id>http://yusizhang.github.io/</id>
-  <author>
-    <name><![CDATA[Yusi Zhang]]></name>
-    
-  </author>
-  <generator uri="http://octopress.org/">Octopress</generator>
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Introduction to Cursive, the Clojure IDE Built on IntelliJ - Tech jibber-jabbers</title>
+  <meta name="author" content="Yusi Zhang">
 
   
-  <entry>
-    <title type="html"><![CDATA[Introduction to Cursive, the Clojure IDE Built on IntelliJ]]></title>
-    <link href="http://yusizhang.github.io/blog/2015/10/07/the-clojure-ide-cursive-in-intellij/"/>
-    <updated>2015-10-07T16:14:02-07:00</updated>
-    <id>http://yusizhang.github.io/blog/2015/10/07/the-clojure-ide-cursive-in-intellij</id>
-    <content type="html"><![CDATA[<h2>Agenda</h2>
+  <meta name="description" content="Agenda Install IntelliJ
+Install Cursive plug-in
+IntelliJ basics
+Create a demo project with clojure and java module
+REPL
+Jar Clojure module
+Invode and &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://yusizhang.github.io/blog/2015/10/07/the-clojure-ide-cursive-in-intellij/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Tech jibber-jabbers" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Tech jibber-jabbers</a></h1>
+  
+    <h2>Just so you know, I play Xbox/3DS/PSV too...╮(╯▽╰)╭</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="sitesearch" value="yusizhang.github.io">
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Introduction to Cursive, the Clojure IDE Built on IntelliJ</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2015-10-07T16:14:02-07:00'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>7</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>4:14 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><h2>Agenda</h2>
 
 <ol>
 <li><a href="#Install%20IntelliJ">Install IntelliJ</a></li>
@@ -39,7 +112,7 @@
 
 <p>Open &ldquo;IntelliJ IDEA&rdquo; &ndash;> &ldquo;Preference&rdquo; &ndash;> &ldquo;Plugins&rdquo; &ndash;> &ldquo;Browse Repositories&rdquo; &ndash;> &ldquo;Manage Repositories&rdquo;</p>
 
-<p><img class="center" src="http://yusizhang.github.io/images/install-cursive-plugin.png"></p>
+<p><img class="center" src="/images/install-cursive-plugin.png"></p>
 
 <p>Add this repository url based on the IntelliJ version you are using. In this case it is
 <a href="https://cursiveclojure.com/plugins-14.1.xml">https://cursiveclojure.com/plugins-14.1.xml</a></p>
@@ -98,7 +171,7 @@
 
 <p>If everything goes right, you should see something like this:</p>
 
-<p><img class="center" src="http://yusizhang.github.io/images/modules.png"></p>
+<p><img class="center" src="/images/modules.png"></p>
 
 <h2>REPL</h2>
 
@@ -122,7 +195,7 @@
 
 <p>As you can see, you can load the file to the REPL or you can switch REPL NS to current file. Let&rsquo;s do switch REPL NS to current file.</p>
 
-<p><img class="center" src="http://yusizhang.github.io/images/REPL.png"></p>
+<p><img class="center" src="/images/REPL.png"></p>
 
 <p>Then you can type in <code>(foo "UC")</code> in the cmd line. The result <code>UC Hello, World!</code> will be shown in the REPL window.</p>
 
@@ -225,8 +298,8 @@
 
 <p>I am sure you will be amazed by it allows you step from java code to clojure code!</p>
 
-<p><img class="center" src="http://yusizhang.github.io/images/debug1.png">
-<img class="center" src="http://yusizhang.github.io/images/debug2.png"></p>
+<p><img class="center" src="/images/debug1.png">
+<img class="center" src="/images/debug2.png"></p>
 
 <h2>Important link</h2>
 
@@ -235,195 +308,151 @@
 <p><a href="https://www.jetbrains.com/idea/download/index.html">IntelliJ download</a></p>
 
 <p><a href="http://www.braveclojure.com/getting-started/">Building, Running and the REPL</a></p>
-]]></content>
-  </entry>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
   
-  <entry>
-    <title type="html"><![CDATA[Clojure Cheatsheet]]></title>
-    <link href="http://yusizhang.github.io/blog/2015/10/06/clojure-cheatsheet/"/>
-    <updated>2015-10-06T13:23:46-07:00</updated>
-    <id>http://yusizhang.github.io/blog/2015/10/06/clojure-cheatsheet</id>
-    <content type="html"><![CDATA[<h2>Define Function</h2>
 
-<p>Write a function which returns a personalized greeting.
-(= (__ &ldquo;Dave&rdquo;) &ldquo;Hello, Dave!&rdquo;)</p>
+<span class="byline author vcard">Posted by <span class="fn">Yusi Zhang</span></span>
 
-<p><a href="https://www.4clojure.com/problem/16">Hello World</a></p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>(fn [name] (str "Hello, ", name, "!"))</span></code></pre></td></tr></table></div></figure>
-
-
-<p>or</p>
-
-<p>&ldquo;#(str "Hello, &rdquo; % &ldquo;!&rdquo;)"</p>
-
-<!-- more -->
-
-
-<h2>Filter</h2>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>(filter #(&gt; % 5) '(3 4 5 6 7))</span></code></pre></td></tr></table></div></figure>
-
-
-<p>returns &lsquo;(6 7)</p>
-
-<h2>Local Bindings</h2>
-
-<p>Clojure lets you give local names to values using the special <strong>let-form</strong>.</p>
-
-<p>Sample1</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>(let [x 5] (+ 2 x))</span></code></pre></td></tr></table></div></figure>
-
-
-<p>In Java something like:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>int x = 5;
-</span><span class='line'>x + 2;</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Sample2</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>(let [x 3, y 10] (- y x))</span></code></pre></td></tr></table></div></figure>
-
-
-<p>In Java something like:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>int x = 3, y = 10;
-</span><span class='line'>y - x;</span></code></pre></td></tr></table></div></figure>
-
-
-<h2>Recursion</h2>
-
-<p>A recursive function is a function which calls itself. This is one of the fundamental techniques used in functional programming.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>(defn recursionFn [x]
-</span><span class='line'>  (when (&gt; x 0)
-</span><span class='line'>    (conj (recursionFn (dec x)) x)))
-</span><span class='line'>
-</span><span class='line'>=&gt;(recursion 5)
-</span><span class='line'>=&gt;[5 4 3 2 1]</span></code></pre></td></tr></table></div></figure>
-
-
-<h2>Rearranging Code &ldquo;->&rdquo; vs &ldquo;->>&rdquo;</h2>
-
-<p>These two lines are the same</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>(sort (rest (reverse [2 5 4 1 3 6])))
-</span><span class='line'>
-</span><span class='line'>(-&gt; [2 5 4 1 3 6] (reverse) (rest) (sort))</span></code></pre></td></tr></table></div></figure>
-
-
-<p>I like this explaination:</p>
-
-<blockquote><p>;; let's compare thread first (->) and thread last ( ->> )<br/>user=> (macroexpand '(-> 0 (+ 1) (+ 2) (+ 3)))<br/>(+ (+ (+ 0 1) 2) 3)<br/>user=> (macroexpand '(->> 0 (+ 1) (+ 2) (+ 3)))<br/>(+ 3 (+ 2 (+ 1 0)))</p><footer><strong>deddu</strong> <cite><a href='https://clojuredocs.org/clojure.core/-%3E%3E#example-55416db5e4b01bb732af0a8c'>clojuredocs.org/clojure.core/&hellip;</a></cite></footer></blockquote>
-
-
-<h2>Loop and recur</h2>
-
-<p>(loop [bindings<em>] exprs</em>)</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>=&gt;(loop [x 10]
-</span><span class='line'>  (when (&gt; x 0)
-</span><span class='line'>      (if (&gt; x 5)
-</span><span class='line'>          (print x)
-</span><span class='line'>          (print (* -1 x)))
-</span><span class='line'>      (recur (- x 1))))
-</span><span class='line'>
-</span><span class='line'>=&gt;-10-9-8-7-6-54321</span></code></pre></td></tr></table></div></figure>
+      
 
 
 
-]]></content>
-  </entry>
+
+<time class='entry-date' datetime='2015-10-07T16:14:02-07:00'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>7</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>4:14 pm</span></time>
+      
+
+<span class="categories">
   
-  <entry>
-    <title type="html"><![CDATA[Mark Down Cheatsheet]]></title>
-    <link href="http://yusizhang.github.io/blog/2015/10/02/hello-world/"/>
-    <updated>2015-10-02T14:45:20-07:00</updated>
-    <id>http://yusizhang.github.io/blog/2015/10/02/hello-world</id>
-    <content type="html"><![CDATA[<h2>Headings</h2>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'># The largest heading (an &lt;h1&gt; tag)
-</span><span class='line'>## The second largest heading (an &lt;h2&gt; tag)
-</span><span class='line'>###### The 6th largest heading (an &lt;h6&gt; tag)</span></code></pre></td></tr></table></div></figure>
-
-
-<!-- more -->
-
-
-<h2>Blockquotes</h2>
-
-<p>In the words of Abraham Lincoln:</p>
-
-<blockquote><p>Pardon my french</p></blockquote>
-
-<h2>Styling text</h2>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>*This text will be italic*
-</span><span class='line'>**This text will be bold**
-</span><span class='line'>**Everyone _must_ attend the meeting at 5 o'clock today.**</span></code></pre></td></tr></table></div></figure>
-
-
-<h2>Lists</h2>
-
-<h3>Unordered lists</h3>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>* Item1
-</span><span class='line'>* Item2</span></code></pre></td></tr></table></div></figure>
-
-
-<h2>Links</h2>
-
-<p><a href="http://yusizhang.github.io/">Visit GitHub!</a></p>
-
-<h2>Code Snippets</h2>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ git clone git@github.com:yusizhang/yusizhang.github.io.git # fork yusizhang.github.io</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>Awesome code snippet</span></code></pre></td></tr></table></div></figure>
-
-
-
-]]></content>
-  </entry>
+    <a class='category' href='/blog/categories/clojure/'>clojure</a>, <a class='category' href='/blog/categories/cursive/'>cursive</a>, <a class='category' href='/blog/categories/ide/'>ide</a>, <a class='category' href='/blog/categories/intellij/'>intellij</a>
   
-</feed>
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://yusizhang.github.io/blog/2015/10/07/the-clojure-ide-cursive-in-intellij/" data-via="" data-counturl="http://yusizhang.github.io/blog/2015/10/07/the-clojure-ide-cursive-in-intellij/" >Tweet</a>
+  
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2015/10/06/clojure-cheatsheet/" title="Previous Post: Clojure Cheatsheet">&laquo; Clojure Cheatsheet</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2015/10/07/the-clojure-ide-cursive-in-intellij/">Introduction to Cursive, the Clojure IDE Built on IntelliJ</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/10/06/clojure-cheatsheet/">Clojure Cheatsheet</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/10/02/hello-world/">Mark Down Cheatsheet</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/yusizhang">@yusizhang</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'yusizhang',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2015 - Yusi Zhang -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
