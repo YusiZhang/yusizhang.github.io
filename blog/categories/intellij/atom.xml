@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Intellij | Tech jibber-jabbers]]></title>
   <link href="http://yusizhang.github.io/blog/categories/intellij/atom.xml" rel="self"/>
   <link href="http://yusizhang.github.io/"/>
-  <updated>2015-10-11T23:27:30-07:00</updated>
+  <updated>2015-10-11T23:40:52-07:00</updated>
   <id>http://yusizhang.github.io/</id>
   <author>
     <name><![CDATA[Yusi Zhang]]></name>
@@ -29,6 +29,9 @@
 <li>Jar Clojure module</li>
 <li>Invode and Debug clojure code in Java module</li>
 </ol>
+
+
+<!-- more -->
 
 
 <h2><a id="Install IntelliJ">Install IntelliJ</a></h2>
