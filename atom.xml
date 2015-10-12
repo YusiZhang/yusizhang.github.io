@@ -4,7 +4,7 @@
   <title><![CDATA[Tech jibber-jabbers]]></title>
   <link href="http://yusizhang.github.io/atom.xml" rel="self"/>
   <link href="http://yusizhang.github.io/"/>
-  <updated>2015-10-11T23:47:49-07:00</updated>
+  <updated>2015-10-12T12:25:55-07:00</updated>
   <id>http://yusizhang.github.io/</id>
   <author>
     <name><![CDATA[Yusi Zhang]]></name>
@@ -27,7 +27,7 @@
 <li>Create a demo project with clojure and java module</li>
 <li>REPL</li>
 <li>Jar Clojure module</li>
-<li>Invode and Debug clojure code in Java module</li>
+<li>Invoke and Debug clojure code in Java module</li>
 </ol>
 
 
@@ -171,7 +171,7 @@
 
 <p>If everything goes right, you can see the &ldquo;clojuredemo.jar&rdquo; in the /target folder.</p>
 
-<h2>Invode and Debug clojure code in Java module</h2>
+<h2>Invoke and Debug clojure code in Java module</h2>
 
 <p>In the java-demo module, add Jar dependency for clojuredemo.jar. And change your DemoJava.java file to this:</p>
 
