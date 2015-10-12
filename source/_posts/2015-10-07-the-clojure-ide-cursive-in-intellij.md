@@ -15,6 +15,8 @@ categories: [clojure, IDE, IntelliJ, Cursive]
 6. Jar Clojure module
 7. Invode and Debug clojure code in Java module 
 
+<!-- more -->
+
 ## <a id="Install IntelliJ">Install IntelliJ</a>
 
 You can download the IntelliJ [here](https://www.jetbrains.com/idea/download/index.html) Cursive plug in will work with IntelliJ with version 12.1, 13.1, 14.1 and the 15 EAP. All the following examples will be using version 14.1 in Mac OS X
