@@ -13,7 +13,7 @@ categories: [clojure, IDE, IntelliJ, Cursive]
 4. Create a demo project with clojure and java module
 5. REPL
 6. Jar Clojure module
-7. Invode and Debug clojure code in Java module 
+7. Invoke and Debug clojure code in Java module 
 
 <!-- more -->
 
@@ -133,7 +133,7 @@ lein jar
 
 If everything goes right, you can see the "clojuredemo.jar" in the /target folder.
 
-## Invode and Debug clojure code in Java module
+## Invoke and Debug clojure code in Java module
 
 In the java-demo module, add Jar dependency for clojuredemo.jar. And change your DemoJava.java file to this:
 
