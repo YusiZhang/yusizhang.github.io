@@ -4,7 +4,7 @@
   <title><![CDATA[Tech jibber-jabbers]]></title>
   <link href="http://yusizhang.github.io/atom.xml" rel="self"/>
   <link href="http://yusizhang.github.io/"/>
-  <updated>2015-10-12T12:25:55-07:00</updated>
+  <updated>2015-10-26T15:11:45-07:00</updated>
   <id>http://yusizhang.github.io/</id>
   <author>
     <name><![CDATA[Yusi Zhang]]></name>
@@ -12,6 +12,67 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Shell Usage Tip]]></title>
+    <link href="http://yusizhang.github.io/blog/2015/10/26/shell-usage-tip/"/>
+    <updated>2015-10-26T14:59:04-07:00</updated>
+    <id>http://yusizhang.github.io/blog/2015/10/26/shell-usage-tip</id>
+    <content type="html"><![CDATA[<h2>Source env setting</h2>
+
+<p>When I tried to write a shell script to set some environment variables that will stay in that shell session, I found the changes I made was lost after that shell process terminated.</p>
+
+<p>For example, my proxyon.sh is like this:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>#!/bin/sh
+</span><span class='line'>export http_proxy="http://myproxy.com:80"
+</span><span class='line'>export https_proxy=$http_proxy
+</span><span class='line'>export HTTP_PROXY=$http_proxy 
+</span><span class='line'>echo $http_proxy</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Then in the shell terminal, instead of running <code>sh proxyon.sh</code>, I can use <code>source proxyon.sh</code> to make sure all the env changes stays during the current shell session.</p>
+
+<h2>Check running process</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>ps -ef</span></code></pre></td></tr></table></div></figure>
+
+
+<p>For example, if I want to know if weblogic server is running or not, do this.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>ps -ef | grep java | grep wls</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>List hidden files</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>ls -a</span></code></pre></td></tr></table></div></figure>
+
+
+<p>or if you install <code>tree</code></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>tree -a</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Find a file</h2>
+
+<p>Find by file name under the current folder.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>find . -name "keyword"</span></code></pre></td></tr></table></div></figure>
+
+
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Introduction to Cursive, the Clojure IDE Built on IntelliJ]]></title>
