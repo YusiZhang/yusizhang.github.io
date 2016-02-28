@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://yusizhang.github.io/blog/2016/02/17/project-yet-name-unknown/</loc>
+    <lastmod>2016-02-17T21:17:34-08:00</lastmod>
+  </url>
+  <url>
     <loc>http://yusizhang.github.io/blog/2015/10/26/shell-usage-tip/</loc>
     <lastmod>2015-10-26T14:59:04-07:00</lastmod>
   </url>
@@ -26,6 +30,9 @@
     <loc>http://yusizhang.github.io/about/</loc>
   </url>
   <url>
+    <loc>http://yusizhang.github.io/project-2016/</loc>
+  </url>
+  <url>
     <loc>http://yusizhang.github.io/blog/categories/test/</loc>
   </url>
   <url>
@@ -39,5 +46,11 @@
   </url>
   <url>
     <loc>http://yusizhang.github.io/blog/categories/cursive/</loc>
+  </url>
+  <url>
+    <loc>http://yusizhang.github.io/blog/categories/project/</loc>
+  </url>
+  <url>
+    <loc>http://yusizhang.github.io/blog/categories/2016/</loc>
   </url>
 </urlset>

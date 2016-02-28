@@ -59,6 +59,7 @@
   <li><a href="/">Blog</a></li>
   <li><a href="/blog/archives">Archives</a></li>
   <li><a href="/about">About</a></li>
+  <li><a href="/project-2016">Project2016</a></li>
 </ul>
 
 </nav>
@@ -137,7 +138,53 @@
 </pre></td><td class='code'><pre><code class=''><span class='line'>find . -name "keyword"</span></code></pre></td></tr></table></div></figure>
 
 
+<h2>MD5 check sum</h2>
 
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[ec2-user@ip-172-31-23-84 ~]$ mkdir md5test
+</span><span class='line'>[ec2-user@ip-172-31-23-84 ~]$ cd md5test/
+</span><span class='line'>[ec2-user@ip-172-31-23-84 md5test]$ ls
+</span><span class='line'>[ec2-user@ip-172-31-23-84 md5test]$ touch file1.txt file2.txt
+</span><span class='line'>[ec2-user@ip-172-31-23-84 md5test]$ ls
+</span><span class='line'>file1.txt  file2.txt
+</span><span class='line'>[ec2-user@ip-172-31-23-84 md5test]$ md5sum *.txt &gt; md5sumtest.md5
+</span><span class='line'>[ec2-user@ip-172-31-23-84 md5test]$ cat md5sumtest.md5 
+</span><span class='line'>d41d8cd98f00b204e9800998ecf8427e  file1.txt
+</span><span class='line'>d41d8cd98f00b204e9800998ecf8427e  file2.txt
+</span><span class='line'>[ec2-user@ip-172-31-23-84 md5test]$ echo "xxxx" &gt; file1.txt 
+</span><span class='line'>[ec2-user@ip-172-31-23-84 md5test]$ md5sum -c md5sumtest.md5 
+</span><span class='line'>file1.txt: FAILED
+</span><span class='line'>file2.txt: OK
+</span><span class='line'>md5sum: WARNING: 1 computed checksum did NOT match
+</span><span class='line'>[ec2-user@ip-172-31-23-84 md5test]$ cat file1.txt 
+</span><span class='line'>xxxx
+</span><span class='line'>[ec2-user@ip-172-31-23-84 md5test]$ cat /dev/null &gt; file1.txt 
+</span><span class='line'>[ec2-user@ip-172-31-23-84 md5test]$ md5sum -c md5sumtest.md5 
+</span><span class='line'>file1.txt: OK
+</span><span class='line'>file2.txt: OK</span></code></pre></td></tr></table></div></figure>
+
+
+<h2></h2>
 </div>
 
 
@@ -175,6 +222,8 @@
         <a class="basic-alignment left" href="/blog/2015/10/07/the-clojure-ide-cursive-in-intellij/" title="Previous Post: Introduction to Cursive, the Clojure IDE Built on IntelliJ">&laquo; Introduction to Cursive, the Clojure IDE Built on IntelliJ</a>
       
       
+        <a class="basic-alignment right" href="/blog/2016/02/17/project-yet-name-unknown/" title="Next Post: Project yet name unknown">Project yet name unknown &raquo;</a>
+      
     </p>
   </footer>
 </article>
@@ -186,6 +235,10 @@
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2016/02/17/project-yet-name-unknown/">Project Yet Name Unknown</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2015/10/26/shell-usage-tip/">Shell Usage Tip</a>
@@ -246,7 +299,7 @@
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2015 - Yusi Zhang -
+  Copyright &copy; 2016 - Yusi Zhang -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 

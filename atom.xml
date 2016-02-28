@@ -4,7 +4,7 @@
   <title><![CDATA[Tech jibber-jabbers]]></title>
   <link href="http://yusizhang.github.io/atom.xml" rel="self"/>
   <link href="http://yusizhang.github.io/"/>
-  <updated>2015-10-26T15:11:45-07:00</updated>
+  <updated>2016-02-28T10:56:14-08:00</updated>
   <id>http://yusizhang.github.io/</id>
   <author>
     <name><![CDATA[Yusi Zhang]]></name>
@@ -12,6 +12,51 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Project Yet Name Unknown]]></title>
+    <link href="http://yusizhang.github.io/blog/2016/02/17/project-yet-name-unknown/"/>
+    <updated>2016-02-17T21:17:34-08:00</updated>
+    <id>http://yusizhang.github.io/blog/2016/02/17/project-yet-name-unknown</id>
+    <content type="html"><![CDATA[<p>Some initial ideas about this project.</p>
+
+<p>By the end of year 2015, I start to get my hands on some DevOps works by chance. It turns out pretty interesting. I am surprised, shamed that how little that I know of this area, and amazed by how fast the technology evolves. Puppet, Chef, MCollective, Docker&hellip;all these fancy terms make me so eager to put them on my LinkedIn profile, which ends with this open source idea. Well&hellip;I am not even sure about the term &ldquo;Open Source&rdquo; is legit in my case. I will probably just put all my codes and documentations somewhere on the Internet publicly and that&rsquo;s all.</p>
+
+<p>Okay, back to the topic. I am thinking of building a dev to release style of pipeline to reduce the unnecessary distraction from non dev works by providing a sort of user friendly interface to inspect a vm&rsquo;s states. At least for the demo and testing purpose. I don&rsquo;t really see too much of actual enterprise level benefits from this project. More of self education purpose.</p>
+
+<p>After couple hours of research, I come out this premature technology candidates:</p>
+
+<ol>
+<li>Container will be hosted by AWS Docker enabled environment.</li>
+<li>Jenkins CI(Continuous Integration) Jobs will be triggered by github post commit actions.</li>
+<li>Chef runs will be kicked by Jenkins job.</li>
+<li>Possibly integrates with kitchen for Chef testing.</li>
+</ol>
+
+
+<p>Roughly saying, I want to give it like a 6 months plan. After first three months named stage one, I would want to be able show it to my team as my side project. So it may focus on a certain set of use cases. The last three months named stage two, I would want to focus on optimizing its scalability. And if goes well I can learn more feedback from the community if this project really worth taking a look at.</p>
+
+<p>Stage one will do a one week sprint planning.
+I will divide epics based on technology key word:</p>
+
+<ol>
+<li>AWS + Docker</li>
+<li>Jenkins CI</li>
+<li>Chef Kitchen testing</li>
+</ol>
+
+
+<h2>Sprint 02-17 ~ 02-24:</h2>
+
+<ol>
+<li><p>Learning 101 on AWS + Docker. Deliverable: re-open my aws account, set up a running instance, install docker.</p></li>
+<li><p>Learning 101 on Jenkins. Deliverable: Install Jenkins on the docker image.</p></li>
+</ol>
+
+
+<p>Git repo: <a href="https://github.com/YusiZhang/Project0">https://github.com/YusiZhang/Project0</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Shell Usage Tip]]></title>
@@ -70,7 +115,53 @@
 </pre></td><td class='code'><pre><code class=''><span class='line'>find . -name "keyword"</span></code></pre></td></tr></table></div></figure>
 
 
+<h2>MD5 check sum</h2>
 
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[ec2-user@ip-172-31-23-84 ~]$ mkdir md5test
+</span><span class='line'>[ec2-user@ip-172-31-23-84 ~]$ cd md5test/
+</span><span class='line'>[ec2-user@ip-172-31-23-84 md5test]$ ls
+</span><span class='line'>[ec2-user@ip-172-31-23-84 md5test]$ touch file1.txt file2.txt
+</span><span class='line'>[ec2-user@ip-172-31-23-84 md5test]$ ls
+</span><span class='line'>file1.txt  file2.txt
+</span><span class='line'>[ec2-user@ip-172-31-23-84 md5test]$ md5sum *.txt &gt; md5sumtest.md5
+</span><span class='line'>[ec2-user@ip-172-31-23-84 md5test]$ cat md5sumtest.md5 
+</span><span class='line'>d41d8cd98f00b204e9800998ecf8427e  file1.txt
+</span><span class='line'>d41d8cd98f00b204e9800998ecf8427e  file2.txt
+</span><span class='line'>[ec2-user@ip-172-31-23-84 md5test]$ echo "xxxx" &gt; file1.txt 
+</span><span class='line'>[ec2-user@ip-172-31-23-84 md5test]$ md5sum -c md5sumtest.md5 
+</span><span class='line'>file1.txt: FAILED
+</span><span class='line'>file2.txt: OK
+</span><span class='line'>md5sum: WARNING: 1 computed checksum did NOT match
+</span><span class='line'>[ec2-user@ip-172-31-23-84 md5test]$ cat file1.txt 
+</span><span class='line'>xxxx
+</span><span class='line'>[ec2-user@ip-172-31-23-84 md5test]$ cat /dev/null &gt; file1.txt 
+</span><span class='line'>[ec2-user@ip-172-31-23-84 md5test]$ md5sum -c md5sumtest.md5 
+</span><span class='line'>file1.txt: OK
+</span><span class='line'>file2.txt: OK</span></code></pre></td></tr></table></div></figure>
+
+
+<h2></h2>
 ]]></content>
   </entry>
   
