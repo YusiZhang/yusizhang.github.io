@@ -53,7 +53,32 @@ Find by file name under the current folder.
 find . -name "keyword"
 ```
 
+## MD5 check sum
+```
+[ec2-user@ip-172-31-23-84 ~]$ mkdir md5test
+[ec2-user@ip-172-31-23-84 ~]$ cd md5test/
+[ec2-user@ip-172-31-23-84 md5test]$ ls
+[ec2-user@ip-172-31-23-84 md5test]$ touch file1.txt file2.txt
+[ec2-user@ip-172-31-23-84 md5test]$ ls
+file1.txt  file2.txt
+[ec2-user@ip-172-31-23-84 md5test]$ md5sum *.txt > md5sumtest.md5
+[ec2-user@ip-172-31-23-84 md5test]$ cat md5sumtest.md5 
+d41d8cd98f00b204e9800998ecf8427e  file1.txt
+d41d8cd98f00b204e9800998ecf8427e  file2.txt
+[ec2-user@ip-172-31-23-84 md5test]$ echo "xxxx" > file1.txt 
+[ec2-user@ip-172-31-23-84 md5test]$ md5sum -c md5sumtest.md5 
+file1.txt: FAILED
+file2.txt: OK
+md5sum: WARNING: 1 computed checksum did NOT match
+[ec2-user@ip-172-31-23-84 md5test]$ cat file1.txt 
+xxxx
+[ec2-user@ip-172-31-23-84 md5test]$ cat /dev/null > file1.txt 
+[ec2-user@ip-172-31-23-84 md5test]$ md5sum -c md5sumtest.md5 
+file1.txt: OK
+file2.txt: OK
+```
 
+## 
 
 
 

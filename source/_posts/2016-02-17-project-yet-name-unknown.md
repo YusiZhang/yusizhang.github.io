@@ -35,6 +35,6 @@ Sprint 02-17 ~ 02-24:
 
 2. Learning 101 on Jenkins. Deliverable: Install Jenkins on the docker image.
 
-
+Git repo: https://github.com/YusiZhang/Project0
 
 
